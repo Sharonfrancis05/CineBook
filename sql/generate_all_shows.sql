@@ -23,7 +23,6 @@ BEGIN
         -- Loop through all movies
         FOR v_movie_id IN SELECT id FROM public.movies LOOP
             
-            -- Set fixed prices for every movie
             v_price_std := 250;
             v_price_prem := 350;
             

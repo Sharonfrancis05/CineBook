@@ -20,7 +20,7 @@ BEGIN
     (v_inox_id, 'INOX', 'Nagpur', 'Eternity Mall, Nagpur', '9876543211'),
     (v_cinepolis_id, 'Cinepolis', 'Nagpur', 'VR Mall, Nagpur', '9876543212');
 
-    -- 2. Insert Screens (Translated to our schema)
+    -- 2. Insert Screens 
     INSERT INTO public.screens (id, theatre_id, name, total_seats) VALUES
     (v_pvr_sc1, v_pvr_id, 'Screen 1 (2D)', 100),
     (v_pvr_sc2, v_pvr_id, 'Screen 2 (3D)', 120),

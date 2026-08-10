@@ -4,7 +4,7 @@ TRUNCATE public.seats CASCADE;
 TRUNCATE public.screens CASCADE;
 TRUNCATE public.theatres CASCADE;
 TRUNCATE public.movies CASCADE;
--- Variables
+-- Variable
 DO $$
 DECLARE
   v_movie_0 bigint := 1;

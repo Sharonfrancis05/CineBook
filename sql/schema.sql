@@ -215,10 +215,8 @@ create index if not exists idx_favourites_user      on public.favourites(user_id
 create index if not exists idx_notifications_user   on public.notifications(user_id, is_read);
 
 
--- =============================================================================
--- 4. STORAGE BUCKETS
--- =============================================================================
-insert into storage.buckets (id, name, public) values 
+
+insert into storage.buckets (id, name, public) values
   ('posters', 'posters', true),
   ('banners', 'banners', true),
   ('theatres', 'theatres', true),
@@ -226,11 +224,6 @@ insert into storage.buckets (id, name, public) values
   ('tickets', 'tickets', false)
 on conflict (id) do nothing;
 
--- =============================================================================
--- 5. FUNCTIONS & TRIGGERS
--- =============================================================================
-
--- Auto-create profile
 create or replace function public.handle_new_user() returns trigger as $$
 begin
   insert into public.profiles (id, full_name, avatar_url)
