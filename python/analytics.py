@@ -1,38 +1,4 @@
-"""
-CineBook Analytics
-==================
-Connects to the same Supabase Postgres database used by the web app and
-turns the SQL views defined in sql/schema.sql (revenue_by_day,
-occupancy_by_show, top_movies_by_revenue, popular_theatres) into a single
-interactive HTML report using pandas + plotly.
 
-USAGE
------
-1. Install dependencies:
-     pip install -r requirements.txt
-
-2. Create a .env file in this folder (or the project root) with:
-     SUPABASE_DB_URL=postgresql://postgres:[YOUR-PASSWORD]@db.[PROJECT-REF].supabase.co:5432/postgres
-
-   You'll find this connection string under Supabase dashboard ->
-   Project Settings -> Database -> Connection string (URI).
-
-3. Run it:
-     python analytics.py
-
-   This produces `cinebook_report.html` in this folder — open it in any
-   browser. It's fully interactive (hover, zoom, filter) because plotly
-   charts are self-contained JS, no server required.
-
-WHY A SEPARATE PYTHON MODULE?
-------------------------------
-The React admin dashboard shows live KPIs for day-to-day operations.
-This script is for periodic/offline business reporting — the kind of
-multi-page deck a theatre chain's operations or finance team would want
-weekly: revenue trends, occupancy health, and which movies/theatres are
-carrying the business. Keeping it separate from the web app means it can
-be scheduled (cron, GitHub Actions, Airflow) without touching frontend code.
-"""
 
 import os
 import sys
