@@ -1,0 +1,87 @@
+/* ===================== CineBook Design Tokens ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Core palette — cinema-at-midnight */
+  --color-void: #08080c;          /* page background */
+  --color-ink: #121218;           /* card surface */
+  --color-ink-2: #1a1a23;         /* elevated surface */
+  --color-ink-3: #232330;         /* hover surface */
+  --color-marquee: #e4335a;       /* crimson — primary CTA / accent */
+  --color-marquee-dim: #b8203f;
+  --color-gold: #f2b705;          /* ratings, premium, ticket stub */
+  --color-violet: #7c5cff;        /* selected seat glow / links */
+  --color-mist: #9a9aad;          /* muted text */
+  --color-mist-2: #5c5c6e;        /* faint text */
+  --color-line: rgba(255, 255, 255, 0.08);
+
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-void);
+  color: #f2f2f5;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(228, 51, 90, 0.15), transparent),
+    radial-gradient(ellipse 60% 40% at 90% 10%, rgba(124, 92, 255, 0.08), transparent);
+  background-attachment: fixed;
+}
+
+/* Custom scrollbar — dark theatre feel */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--color-void); }
+::-webkit-scrollbar-thumb { background: var(--color-ink-3); border-radius: 8px; border: 2px solid var(--color-void); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-mist-2); }
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.045);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-strong {
+  background: rgba(18, 18, 24, 0.75);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-gradient-marquee {
+  background: linear-gradient(90deg, #e4335a, #f2b705);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+}
+
+.font-mono-ui { font-family: var(--font-mono); }
+
+/* Focus visibility for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
