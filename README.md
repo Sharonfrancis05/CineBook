@@ -17,8 +17,6 @@ A full-stack movie ticket booking platform with live, show-specific seat selecti
 ![License](https://img.shields.io/badge/License-MIT-red?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-In_Development-yellow?style=flat-square)
 
-<img src="screenshots/Screenshot_2026-08-11_212656.png" width="800"/>
-
 </div>
 
 ---
@@ -35,7 +33,6 @@ A full-stack movie ticket booking platform with live, show-specific seat selecti
 - [Database Architecture](#database-architecture)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
-- [Screenshots](#screenshots)
 - [Installation & Setup](#installation--setup)
 - [Supabase Configuration](#supabase-configuration)
 - [Environment Variables](#environment-variables)
@@ -238,28 +235,6 @@ cinebook/
 
 ---
 
-## Screenshots
-
-<div align="center">
-
-| Home — Now Playing | Now Showing — Movie Grid |
-|:---:|:---:|
-| <img src="screenshots/Screenshot_2026-08-11_212656.png" width="420"/> | <img src="screenshots/Screenshot_2026-08-11_212720.png" width="420"/> |
-
-| Movie Details | Select Showtime |
-|:---:|:---:|
-| <img src="screenshots/Screenshot_2026-08-11_213115.png" width="420"/> | <img src="screenshots/Screenshot_2026-08-11_213132.png" width="420"/> |
-
-| Seat Selection | Payment |
-|:---:|:---:|
-| <img src="screenshots/Screenshot_2026-08-11_213206.png" width="420"/> | <img src="screenshots/Screenshot_2026-08-11_213222.png" width="420"/> |
-
-</div>
-
-> Place the corresponding screenshot files in a `screenshots/` folder at the project root using the exact filenames shown above.
-
----
-
 ## Installation & Setup
 
 ### Prerequisites
@@ -371,7 +346,7 @@ Supabase **Row Level Security (RLS)** is enabled on user-related tables to ensur
 
 <div align="center">
 
-**Built by Sharon Francis**
+**Built by [Your Name]**
 
 Licensed under the [MIT License](LICENSE).
 
