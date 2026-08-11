@@ -346,7 +346,7 @@ Supabase **Row Level Security (RLS)** is enabled on user-related tables to ensur
 
 <div align="center">
 
-**Built by [Your Name]**
+**Built by Sharon Francis**
 
 Licensed under the [MIT License](LICENSE).
 
